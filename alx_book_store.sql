@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS authors (
 );
 
 -- Create Books table
-CREATE TABLE IF NOT EXISTS books (
+CREATE TABLE IF NOT EXISTS Books (
     book_id INT AUTO_INCREMENT,
     title VARCHAR(130) NOT NULL,
     author_id INT NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS Customers (
 );
 
 -- Create Orders table
-CREATE TABLE IF NOT EXISTS orders (
+CREATE TABLE IF NOT EXISTS Orders (
     order_id INT AUTO_INCREMENT,
     customer_id INT NOT NULL,
     order_date DATE NOT NULL,
@@ -47,6 +47,6 @@ CREATE TABLE IF NOT EXISTS order_details (
     book_id INT NOT NULL,
     quantity DOUBLE NOT NULL,
     PRIMARY KEY (orderdetailid),
-    FOREIGN KEY (order_id) REFERENCES orders(order_id),
-    FOREIGN KEY (book_id) REFERENCES books(book_id)
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
+    FOREIGN KEY (book_id) REFERENCES Books(book_id)
 );
