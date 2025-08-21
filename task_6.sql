@@ -1,4 +1,3 @@
--- Update the address of a customer
-UPDATE Customers
-SET address = '124 Happiness Ave.'
-WHERE customer_id = 1;
+-- Insert a new customer
+INSERT INTO Customers (customer_name, email, address)
+VALUES ('Blessing Malik', 'bmalik@sandtech.com', '124 Happiness Ave.');
